@@ -1,3 +1,5 @@
+import br.com.ferpioli.screenmatch.modelos.Filme;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -11,5 +13,6 @@ public class Principal {
         meuFilme.avalia(10);
         System.out.println("total de avaliações:" + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
+
     }
 }

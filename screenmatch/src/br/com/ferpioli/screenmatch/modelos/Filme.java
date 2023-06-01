@@ -1,21 +1,27 @@
+package br.com.ferpioli.screenmatch.modelos;
+
 public class Filme {
-    String nome;
-    int anoDeLancamento;
+    public String nome;
+   public int anoDeLancamento;
     boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
-    int getTotalDeAvaliacoes(){
+   public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
 
-    void exibeFichaTecnica(){
+   public void exibeFichaTecnica(){
         System.out.println("nome do filme: "  + nome);
         System.out.println("ano de lançamento:" + anoDeLancamento);
     }
 
-    void avalia(double nota){
+    public double getSomaDasAvaliacoes() {
+        return somaDasAvaliacoes;
+    }
+
+    public void avalia(double nota){
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
