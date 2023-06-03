@@ -1,9 +1,20 @@
 package br.com.ferpioli.screenmatch.modelos;
 
-public class Episodio {
+import br.com.ferpioli.screeanmatch.calculos.Classificavel;
+
+public class Episodio implements Classificavel {
     private int numero;
     private String nome;
     private Serie serie;
+    private int totalVisualisacoes;
+
+    public int getTotalVisualisacoes() {
+        return totalVisualisacoes;
+    }
+
+    public void setTotalVisualisacoes(int totalVisualisacoes) {
+        this.totalVisualisacoes = totalVisualisacoes;
+    }
 
     public int getNumero() {
         return numero;
@@ -27,5 +38,15 @@ public class Episodio {
 
     public void setSerie(Serie serie) {
         this.serie = serie;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (totalVisualisacoes > 100 ){
+            return 4;
+
+        } else {
+            return 2;
+        }
     }
 }
