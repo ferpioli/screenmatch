@@ -1,0 +1,4 @@
+# Curso Alura
+## Fomação Java
+
+Durante o desenvolvimento do projeto ScreenMatch, tive a oportunidade de adquirir conhecimento e aplicar os quatro princípios fundamentais da Orientação a Objetos: abstração, herança, encapsulamento e polimorfismo. Por meio da modelagem em classes, cada uma com suas próprias regras de negócio, pude utilizar o encapsulamento para garantir o controle adequado dos atributos, mantendo seu acesso privado. Além disso, organizei o código em pacotes, aproveitei o reaproveitamento de código por meio da herança e utilizei a sobrescrita de métodos para que cada classe de especialização se comportasse conforme necessário. Tive uma compreensão sólida e trabalhei com o conceito de polimorfismo, onde a referência a uma classe mais genérica (superclasse) foi utilizada para que o método chamado se adaptasse de acordo com a subclasse passada como parâmetro. Também implementei interfaces e entendi a motivação por trás de sua utilização.
