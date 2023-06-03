@@ -1,3 +1,4 @@
+import br.com.ferpioli.screeanmatch.calculos.CalculadoraDeTempo;
 import br.com.ferpioli.screenmatch.modelos.Filme;
 import br.com.ferpioli.screenmatch.modelos.Serie;
 
@@ -23,7 +24,17 @@ public class Principal {
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração temporadas lost: " + lost.getDuracaoEmMinutos());
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
 
 
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+
+        System.out.println((calculadora.getTempoTotal()));
     }
 }
