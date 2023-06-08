@@ -9,9 +9,9 @@ import java.util.Objects;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("Poderoso chefão");
+        Filme meuFilme = new Filme("Poderoso chefão", 1970);
        // meuFilme.setNome("Poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        //meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: "+  meuFilme.getDuracaoEmMinutos());
         meuFilme.exibeFichaTecnica();
@@ -21,9 +21,9 @@ public class Principal {
         System.out.println("total de avaliações:" + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("lost",2000);
+        //lost.setNome("Lost");
+        //lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -33,9 +33,9 @@ public class Principal {
         calculadora.inclui(meuFilme);
 
 
-        Filme outroFilme = new Filme("Avatar");
+        Filme outroFilme = new Filme("Avatar", 2023);
         //outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        //outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
@@ -51,7 +51,7 @@ public class Principal {
         episodio.setTotalVisualisacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoFernando = new Filme("nome");
+        var filmeDoFernando = new Filme("Doville",2003);
         filmeDoFernando.setDuracaoEmMinutos(200);
         //filmeDoFernando.setNome("DogVille");
         filmeDoFernando.setAnoDeLancamento(2003);
