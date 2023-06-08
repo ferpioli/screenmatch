@@ -1,11 +1,12 @@
+package br.com.ferpioli.screeanmatch.principal;
+
 import br.com.ferpioli.screeanmatch.calculos.CalculadoraDeTempo;
 import br.com.ferpioli.screeanmatch.calculos.FiltroRecomendacao;
-import br.com.ferpioli.screenmatch.modelos.Episodio;
-import br.com.ferpioli.screenmatch.modelos.Filme;
-import br.com.ferpioli.screenmatch.modelos.Serie;
+import br.com.ferpioli.screeanmatch.modelos.Episodio;
+import br.com.ferpioli.screeanmatch.modelos.Filme;
+import br.com.ferpioli.screeanmatch.modelos.Serie;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Principal {
     public static void main(String[] args) {

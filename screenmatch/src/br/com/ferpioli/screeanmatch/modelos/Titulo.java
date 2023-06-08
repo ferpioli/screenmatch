@@ -1,4 +1,4 @@
-package br.com.ferpioli.screenmatch.modelos;
+package br.com.ferpioli.screeanmatch.modelos;
 
 public class Titulo {
     private String nome;

@@ -1,4 +1,4 @@
-package br.com.ferpioli.screenmatch.modelos;
+package br.com.ferpioli.screeanmatch.modelos;
 
 import br.com.ferpioli.screeanmatch.calculos.Classificavel;
 
