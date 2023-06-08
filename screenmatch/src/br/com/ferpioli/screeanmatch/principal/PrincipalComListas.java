@@ -7,6 +7,7 @@ import br.com.ferpioli.screeanmatch.modelos.Titulo;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -44,6 +45,9 @@ public class PrincipalComListas {
         System.out.println("Depois da ordenção: " + buscaPorArtista);
         System.out.println("Lista de tilulos ordenados");
         Collections.sort(lista);
+        System.out.println(lista);
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("ordenando por ano");
         System.out.println(lista);
     }
 }
