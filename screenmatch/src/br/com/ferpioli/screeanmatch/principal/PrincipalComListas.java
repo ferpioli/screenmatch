@@ -5,6 +5,8 @@ import br.com.ferpioli.screeanmatch.modelos.Serie;
 import br.com.ferpioli.screeanmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -31,5 +33,17 @@ public class PrincipalComListas {
             }
 
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adan Sandler");
+        buscaPorArtista.add("Fernanda Montengro");
+        buscaPorArtista.add("Brad Pitt");
+        System.out.println((buscaPorArtista));
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenção: " + buscaPorArtista);
+        System.out.println("Lista de tilulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }
