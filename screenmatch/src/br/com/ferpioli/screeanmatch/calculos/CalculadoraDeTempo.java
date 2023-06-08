@@ -1,6 +1,6 @@
 package br.com.ferpioli.screeanmatch.calculos;
 
-import br.com.ferpioli.screenmatch.modelos.Titulo;
+import br.com.ferpioli.screeanmatch.modelos.Titulo;
 
 public class CalculadoraDeTempo {
     private int tempoTotal;

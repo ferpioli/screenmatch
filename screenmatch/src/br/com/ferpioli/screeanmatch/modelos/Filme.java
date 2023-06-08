@@ -1,11 +1,15 @@
-package br.com.ferpioli.screenmatch.modelos;
+package br.com.ferpioli.screeanmatch.modelos;
 
 import br.com.ferpioli.screeanmatch.calculos.Classificavel;
 
 public class Filme extends  Titulo implements Classificavel {
     private String diretor;
 
-    public String getDiretor() {
+    public Filme(String nome, int anoDeLancamento) {
+      super(nome, anoDeLancamento);
+    }
+
+     public String getDiretor() {
         return diretor;
     }
 
@@ -16,5 +20,10 @@ public class Filme extends  Titulo implements Classificavel {
     @Override
     public int getClassificacao() {
         return (int) (pegaMedia()/2); //casting
+    }
+
+    @Override
+    public String toString() {
+        return "Fime:" + this.getNome() + "( " + this.getAnoDeLancamento() + ")";
     }
 }

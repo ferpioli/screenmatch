@@ -1,14 +1,18 @@
+package br.com.ferpioli.screeanmatch.principal;
+
 import br.com.ferpioli.screeanmatch.calculos.CalculadoraDeTempo;
 import br.com.ferpioli.screeanmatch.calculos.FiltroRecomendacao;
-import br.com.ferpioli.screenmatch.modelos.Episodio;
-import br.com.ferpioli.screenmatch.modelos.Filme;
-import br.com.ferpioli.screenmatch.modelos.Serie;
+import br.com.ferpioli.screeanmatch.modelos.Episodio;
+import br.com.ferpioli.screeanmatch.modelos.Filme;
+import br.com.ferpioli.screeanmatch.modelos.Serie;
+
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("Poderoso chefão", 1970);
+       // meuFilme.setNome("Poderoso chefão");
+        //meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: "+  meuFilme.getDuracaoEmMinutos());
         meuFilme.exibeFichaTecnica();
@@ -18,9 +22,9 @@ public class Principal {
         System.out.println("total de avaliações:" + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("lost",2000);
+        //lost.setNome("Lost");
+        //lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -30,9 +34,9 @@ public class Principal {
         calculadora.inclui(meuFilme);
 
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
+        //outroFilme.setNome("Avatar");
+        //outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
@@ -47,5 +51,22 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualisacoes(300);
         filtro.filtra(episodio);
-    }
+
+        var filmeDoFernando = new Filme("Doville",2003);
+        filmeDoFernando.setDuracaoEmMinutos(200);
+        //filmeDoFernando.setNome("DogVille");
+        filmeDoFernando.setAnoDeLancamento(2003);
+        filmeDoFernando.avalia(10);
+
+        ArrayList<Filme> listaDeFimes = new ArrayList<>();
+        listaDeFimes.add(filmeDoFernando);
+        listaDeFimes.add(meuFilme);
+        listaDeFimes.add(outroFilme);
+        System.out.println("Tamanho da lista " + listaDeFimes.size());
+        System.out.println(("Primeiro filme " + listaDeFimes.get(0).getNome()));
+        System.out.println((listaDeFimes));
+        System.out.println(("ToString do filme " + listaDeFimes.get(0).toString()));
+
+
+        }
 }
