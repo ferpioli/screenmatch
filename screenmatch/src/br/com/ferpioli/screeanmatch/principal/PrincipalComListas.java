@@ -4,10 +4,7 @@ import br.com.ferpioli.screeanmatch.modelos.Filme;
 import br.com.ferpioli.screeanmatch.modelos.Serie;
 import br.com.ferpioli.screeanmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -21,7 +18,7 @@ public class PrincipalComListas {
 
 
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(filmeDoFernando);
         lista.add(meuFilme);
         lista.add(outroFilme);
