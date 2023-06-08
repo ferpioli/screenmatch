@@ -4,6 +4,8 @@ import br.com.ferpioli.screenmatch.modelos.Episodio;
 import br.com.ferpioli.screenmatch.modelos.Filme;
 import br.com.ferpioli.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -47,5 +49,19 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualisacoes(300);
         filtro.filtra(episodio);
-    }
+
+        var filmeDoFernando = new Filme();
+        filmeDoFernando.setDuracaoEmMinutos(200);
+        filmeDoFernando.setNome("DogVille");
+        filmeDoFernando.setAnoDeLancamento(2003);
+        filmeDoFernando.avalia(10);
+
+        ArrayList<Filme> listaDeFimes = new ArrayList<>();
+        listaDeFimes.add(filmeDoFernando);
+        listaDeFimes.add(meuFilme);
+        listaDeFimes.add(outroFilme);
+        System.out.println("Tamanho da lista " + listaDeFimes.size());
+        System.out.println(("Primeiro filme " + listaDeFimes.get(0).getNome()));
+        System.out.println((listaDeFimes));
+        }
 }
