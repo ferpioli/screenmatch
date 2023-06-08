@@ -21,6 +21,18 @@ public class CartaoDeCredito {
             return true;
         }
         return false;
-    }
 
     }
+
+    public double getLimite() {
+        return limite;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public List<Compra> getCompras() {
+        return compras;
+    }
+}
