@@ -5,11 +5,12 @@ import br.com.ferpioli.screenmatch.modelos.Filme;
 import br.com.ferpioli.screenmatch.modelos.Serie;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Poderoso chefão");
+        Filme meuFilme = new Filme("Poderoso chefão");
+       // meuFilme.setNome("Poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: "+  meuFilme.getDuracaoEmMinutos());
@@ -32,8 +33,8 @@ public class Principal {
         calculadora.inclui(meuFilme);
 
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
+        //outroFilme.setNome("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
         calculadora.inclui(outroFilme);
@@ -50,9 +51,9 @@ public class Principal {
         episodio.setTotalVisualisacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoFernando = new Filme();
+        var filmeDoFernando = new Filme("nome");
         filmeDoFernando.setDuracaoEmMinutos(200);
-        filmeDoFernando.setNome("DogVille");
+        //filmeDoFernando.setNome("DogVille");
         filmeDoFernando.setAnoDeLancamento(2003);
         filmeDoFernando.avalia(10);
 
@@ -64,5 +65,7 @@ public class Principal {
         System.out.println(("Primeiro filme " + listaDeFimes.get(0).getNome()));
         System.out.println((listaDeFimes));
         System.out.println(("ToString do filme " + listaDeFimes.get(0).toString()));
+
+
         }
 }
