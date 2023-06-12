@@ -1,5 +1,6 @@
 package br.com.ferpioli.screeanmatch.principal;
 
+import br.com.ferpioli.screeanmatch.execao.ErroDeConversaoDeAnoException;
 import br.com.ferpioli.screeanmatch.modelos.Titulo;
 import br.com.ferpioli.screeanmatch.modelos.TituloOmdb;
 import com.google.gson.FieldNamingPolicy;
@@ -18,7 +19,7 @@ public class PrincipalComBusca {
         Scanner leitura = new Scanner(System.in);
         System.out.println("Digite um filme para busca: ");
         var busca = leitura.nextLine();
-        String endereco = "https://omdbapi.com/?t="+busca+"&apiKey=73ba8dae";
+        String endereco = "https://omdbapi.com/?t="+busca.replace(" ","+")+"&apiKey=73ba8dae";
 
         try{
             HttpClient client = HttpClient.newHttpClient();
@@ -46,6 +47,8 @@ public class PrincipalComBusca {
             System.out.println((e.getMessage()));
         }catch (IllegalArgumentException e) {
             System.out.println("Erro na URL");
+        } catch (ErroDeConversaoDeAnoException e ){
+            System.out.println(e.getMessage());
         }
 
         System.out.println("Finalizou corretamente");
