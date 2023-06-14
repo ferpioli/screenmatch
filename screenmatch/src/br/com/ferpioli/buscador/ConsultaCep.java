@@ -13,19 +13,19 @@ public class ConsultaCep {
     public Endereco buscaEndereco(String cep){
         URI enderco = URI.create("https://viacep.com.br/ws/"+cep+"/json");
 
-        HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(enderco)
                 .build();
 
-        HttpResponse<String> response = null;
+
         try {
-            response = HttpClient
+            HttpResponse<String> response = HttpClient
                     .newHttpClient()
                     .send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException | InterruptedException e) {
+            return new Gson().fromJson(response.body(), Endereco.class);
+        } catch (Exception e) {
             throw new RuntimeException("Endereço não encontrado");
         }
-        return new Gson().fromJson(response.body(), Endereco.class);
+
     }
 }
